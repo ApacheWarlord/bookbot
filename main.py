@@ -11,7 +11,7 @@ def main():
     word_count_result = word_count(book_text)
     print(f'{word_count_result} words found in the document.')
     # Further processing of book_text can be done here
-
+    print("Character counts:", no_each_character(book_text))
 
 
 main()
