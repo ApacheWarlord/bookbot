@@ -21,7 +21,7 @@ def main():
     print(f"Found {word_count_result} total words")
     print("--------- Character Count -------")
     char_counts = get_char_counts(book_text)
-    sorted_counts = get_char_counts(char_counts)
+    sorted_counts = sorted_char_counts(char_counts)
     for item in sorted_counts:
         print(f"{item['char']}: {item['num']}")
     print("============= END ===============")
