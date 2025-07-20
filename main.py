@@ -5,7 +5,7 @@ def get_book_text(file_path):
         content = f.read()
     return content
 
-from stats import word_count, no_each_character, sorted_char_counts
+from stats import word_count, get_char_counts, sorted_char_counts
 
 def main():
     if len(sys.argv) != 2:
@@ -20,8 +20,8 @@ def main():
     print("----------- Word Count ----------")
     print(f"Found {word_count_result} total words")
     print("--------- Character Count -------")
-    char_counts = no_each_character(book_text)
-    sorted_counts = sorted_char_counts(char_counts)
+    char_counts = get_char_counts(book_text)
+    sorted_counts = get_char_counts(char_counts)
     for item in sorted_counts:
         print(f"{item['char']}: {item['num']}")
     print("============= END ===============")

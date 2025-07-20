@@ -2,7 +2,7 @@ def word_count(text):
     words = text.split()
     return len(words)
 
-def no_each_character(text):
+def get_char_counts(text):
     char_counts = {}
     for char in text.lower():
         if char in char_counts:
@@ -11,7 +11,6 @@ def no_each_character(text):
             char_counts[char] = 1
     return char_counts
 
-# ...existing code...
 
 def sorted_char_counts(char_counts):
     # Create a list of dicts for alphabetic characters only
@@ -23,4 +22,3 @@ def sorted_char_counts(char_counts):
     # Sort by count descending
     char_list.sort(key=lambda x: x["num"], reverse=True)
     return char_list
-# ...existing code...
